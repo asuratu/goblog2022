@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"goblog/pkg/route"
 	"html/template"
 	"log"
 	"net/http"
@@ -17,7 +18,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var router = mux.NewRouter()
+var router *mux.Router
 var db *sql.DB
 
 func initDB() {
@@ -497,6 +498,9 @@ func (a Article) Delete() (rowsAffected int64, err error) {
 func main() {
 	initDB()
 	createTables()
+
+	route.Initialize()
+	router = route.Router
 
 	router.HandleFunc("/", homeHandler).Methods("GET").Name("home")
 	router.HandleFunc("/about", aboutHandler).Methods("GET").Name("about")
