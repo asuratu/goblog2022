@@ -17,7 +17,6 @@ func RegisterWebRoutes(r *mux.Router) {
 
 	// 静态页面
 	pc := controllers.PagesController{}
-	r.HandleFunc("/", pc.Home).Methods("GET").Name("home")
 	r.HandleFunc("/about", pc.About).Methods("GET").Name("about")
 
 	// 自定义 404 页面
@@ -25,6 +24,10 @@ func RegisterWebRoutes(r *mux.Router) {
 
 	// 文章相关页面
 	ac := new(controllers.ArticlesController)
+
+	// 首页
+	r.HandleFunc("/", ac.Index).Methods("GET").Name("home")
+
 	r.HandleFunc("/articles/{id:[0-9]+}", ac.Show).Methods("GET").Name("articles.show")
 
 	// 文章列表页面

@@ -9,6 +9,7 @@ import (
 // RegisterUserRoutes 注册网页相关路由
 func RegisterUserRoutes(r *mux.Router) {
 	auc := new(controllers.AuthController)
+
 	// 用户注册
 	r.HandleFunc("/auth/register", auc.Register).Methods("GET").Name("auth.register")
 	r.HandleFunc("/auth/do-register", auc.DoRegister).Methods("POST").Name("auth.doregister")
