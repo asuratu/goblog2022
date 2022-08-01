@@ -2,6 +2,7 @@ package routes
 
 import (
 	"goblog/app/http/controllers"
+	"goblog/app/http/middlewares"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -35,4 +36,7 @@ func RegisterWebRoutes(r *mux.Router) {
 
 	// 删除文章
 	r.HandleFunc("/articles/{id:[0-9]+}/delete", ac.Delete).Methods("POST").Name("articles.delete")
+
+	// 中间件：强制内容类型为 HTML
+	r.Use(middlewares.ForceHTML)
 }
