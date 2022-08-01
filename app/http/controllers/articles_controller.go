@@ -39,8 +39,8 @@ func (*ArticlesController) Show(w http.ResponseWriter, r *http.Request) {
 		// 4. 读取成功，显示文章
 		tmpl, err := template.New("show.gohtml").
 			Funcs(template.FuncMap{
-				"RouteName2URL": route.Name2URL,
-				"Int64ToString": types.Uint64ToString,
+				"RouteName2URL":  route.Name2URL,
+				"Uint64ToString": types.Uint64ToString,
 			}).
 			ParseFiles("resources/views/articles/show.gohtml")
 		logger.LogError(err)

@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"goblog/app/global"
 	"goblog/bootstrap"
 	"goblog/pkg/database"
 	"goblog/pkg/logger"
@@ -16,7 +17,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var router *mux.Router
 var db *sql.DB
 
 // Article  对应一条文章数据
@@ -57,7 +57,7 @@ func articlesIndexHandler(w http.ResponseWriter, r *http.Request) {
 
 // Link 方法用来生成文章链接
 func (a Article) Link() string {
-	showURL, err := router.Get("articles.show").URL("id", strconv.FormatInt(a.ID, 10))
+	showURL, err := global.Router.Get("articles.show").URL("id", strconv.FormatInt(a.ID, 10))
 	if err != nil {
 		logger.LogError(err)
 		return ""
@@ -75,7 +75,7 @@ func forceHTMLMiddleware(next http.Handler) http.Handler {
 }
 
 func articlesCreateHandler(w http.ResponseWriter, r *http.Request) {
-	storeURL, _ := router.Get("articles.store").URL()
+	storeURL, _ := global.Router.Get("articles.store").URL()
 	data := ArticlesFormData{
 		Title:  "",
 		Body:   "",
@@ -118,7 +118,7 @@ func articlesStoreHandler(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprint(w, "500 服务器内部错误")
 		}
 	} else {
-		storeURL, _ := router.Get("articles.store").URL()
+		storeURL, _ := global.Router.Get("articles.store").URL()
 
 		data := ArticlesFormData{
 			Title:  title,
@@ -202,7 +202,7 @@ func articlesEditHandler(w http.ResponseWriter, r *http.Request) {
 		}
 	} else {
 		// 4. 读取成功，显示表单
-		updateURL, _ := router.Get("articles.update").URL("id", id)
+		updateURL, _ := global.Router.Get("articles.update").URL("id", id)
 		data := ArticlesFormData{
 			Title:  article.Title,
 			Body:   article.Body,
@@ -267,7 +267,7 @@ func articlesUpdateHandler(w http.ResponseWriter, r *http.Request) {
 
 			// √ 更新成功，跳转到文章详情页
 			if n, _ := rs.RowsAffected(); n > 0 {
-				showURL, _ := router.Get("articles.show").URL("id", id)
+				showURL, _ := global.Router.Get("articles.show").URL("id", id)
 				http.Redirect(w, r, showURL.String(), http.StatusFound)
 			} else {
 				fmt.Fprint(w, "您没有做任何更改！")
@@ -276,7 +276,7 @@ func articlesUpdateHandler(w http.ResponseWriter, r *http.Request) {
 
 			// 4.3 表单验证不通过，显示理由
 
-			updateURL, _ := router.Get("articles.update").URL("id", id)
+			updateURL, _ := global.Router.Get("articles.update").URL("id", id)
 			data := ArticlesFormData{
 				Title:  title,
 				Body:   body,
@@ -356,7 +356,7 @@ func articlesDeleteHandler(w http.ResponseWriter, r *http.Request) {
 			// 4.2 未发生错误
 			if rowsAffected > 0 {
 				// 重定向到文章列表页
-				indexURL, _ := router.Get("articles.index").URL()
+				indexURL, _ := global.Router.Get("articles.index").URL()
 				http.Redirect(w, r, indexURL.String(), http.StatusFound)
 			} else {
 				// Edge case
@@ -388,17 +388,20 @@ func main() {
 	db = database.DB
 
 	bootstrap.SetupDB()
-	router = bootstrap.SetupRoute()
+	bootstrap.InitRouter()
 
-	router.HandleFunc("/articles", articlesIndexHandler).Methods("GET").Name("articles.index")
-	router.HandleFunc("/articles", articlesStoreHandler).Methods("POST").Name("articles.store")
-	router.HandleFunc("/articles/create", articlesCreateHandler).Methods("GET").Name("articles.create")
-	router.HandleFunc("/articles/{id:[0-9]+}/edit", articlesEditHandler).Methods("GET").Name("articles.edit")
-	router.HandleFunc("/articles/{id:[0-9]+}", articlesUpdateHandler).Methods("POST").Name("articles.update")
-	router.HandleFunc("/articles/{id:[0-9]+}/delete", articlesDeleteHandler).Methods("POST").Name("articles.delete")
+	global.Router.HandleFunc("/articles", articlesIndexHandler).Methods("GET").Name("articles.index")
+	global.Router.HandleFunc("/articles", articlesStoreHandler).Methods("POST").Name("articles.store")
+	global.Router.HandleFunc("/articles/create", articlesCreateHandler).Methods("GET").Name("articles.create")
+	global.Router.HandleFunc("/articles/{id:[0-9]+}/edit", articlesEditHandler).Methods("GET").Name("articles.edit")
+	global.Router.HandleFunc("/articles/{id:[0-9]+}", articlesUpdateHandler).Methods("POST").Name("articles.update")
+	global.Router.HandleFunc("/articles/{id:[0-9]+}/delete", articlesDeleteHandler).Methods("POST").Name("articles.delete")
 
 	// 中间件：强制内容类型为 HTML
-	router.Use(forceHTMLMiddleware)
+	global.Router.Use(forceHTMLMiddleware)
 
-	http.ListenAndServe(":3000", removeTrailingSlash(router))
+	err := http.ListenAndServe(":3000", removeTrailingSlash(global.Router))
+	if err != nil {
+		panic(err)
+	}
 }
