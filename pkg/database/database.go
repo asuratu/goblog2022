@@ -24,7 +24,7 @@ func initDB() {
 	// 设置数据库连接信息
 	config := mysql.Config{
 		User:                 "root",
-		Passwd:               "secret",
+		Passwd:               "tu4211241992",
 		Addr:                 "127.0.0.1:3306",
 		Net:                  "tcp",
 		DBName:               "goblog",
