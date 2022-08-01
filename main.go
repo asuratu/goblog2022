@@ -55,16 +55,6 @@ func articlesIndexHandler(w http.ResponseWriter, r *http.Request) {
 	logger.LogError(err)
 }
 
-// Link 方法用来生成文章链接
-func (a Article) Link() string {
-	showURL, err := global.Router.Get("articles.show").URL("id", strconv.FormatInt(a.ID, 10))
-	if err != nil {
-		logger.LogError(err)
-		return ""
-	}
-	return showURL.String()
-}
-
 func forceHTMLMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// 1. 设置标头
@@ -390,7 +380,6 @@ func main() {
 	bootstrap.SetupDB()
 	bootstrap.InitRouter()
 
-	global.Router.HandleFunc("/articles", articlesIndexHandler).Methods("GET").Name("articles.index")
 	global.Router.HandleFunc("/articles", articlesStoreHandler).Methods("POST").Name("articles.store")
 	global.Router.HandleFunc("/articles/create", articlesCreateHandler).Methods("GET").Name("articles.create")
 	global.Router.HandleFunc("/articles/{id:[0-9]+}/edit", articlesEditHandler).Methods("GET").Name("articles.edit")
