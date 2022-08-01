@@ -7,8 +7,11 @@
     <list default="true" id="5259da5c-b967-49b0-8cce-a8f0bda42792" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/http/controllers/auth_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/auth_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/article/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article/article.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/article/crud.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article/crud.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/route.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/route.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logger/logger.go" afterDir="false" />
@@ -18,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/resources/views/articles/create.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/create.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/edit.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/edit.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/show.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.gohtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +80,7 @@
       <recent name="$PROJECT_DIR$/app/global" />
     </key>
   </component>
-  <component name="RunManager" selected="Go 构建.go build goblog">
+  <component name="RunManager" selected="Go 测试.goblog/tests 中的 TestAllPages">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="goblog2022" />
       <working_directory value="$PROJECT_DIR$" />
@@ -117,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go 构建.go build goblog" />
         <item itemvalue="Go 测试.goblog/tests 中的 TestAllPages" />
+        <item itemvalue="Go 构建.go build goblog" />
       </list>
     </recent_temporary>
   </component>
