@@ -14,8 +14,9 @@
       <change beforePath="$PROJECT_DIR$/pkg/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logger/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/model/model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/route/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/index.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/show.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/view/view.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/view/view.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/create.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/create.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/edit.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/edit.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
