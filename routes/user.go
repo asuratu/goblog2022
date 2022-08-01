@@ -3,15 +3,24 @@ package routes
 import (
 	"github.com/gorilla/mux"
 	"goblog/app/http/controllers"
+	"goblog/app/http/middlewares"
 )
 
 // RegisterUserRoutes 注册网页相关路由
 func RegisterUserRoutes(r *mux.Router) {
-	// 用户认证
 	auc := new(controllers.AuthController)
+	// 用户注册
 	r.HandleFunc("/auth/register", auc.Register).Methods("GET").Name("auth.register")
 	r.HandleFunc("/auth/do-register", auc.DoRegister).Methods("POST").Name("auth.doregister")
 
+	r.HandleFunc("/auth/login", auc.Login).Methods("GET").Name("auth.login")
+	r.HandleFunc("/auth/dologin", auc.DoLogin).Methods("POST").Name("auth.dologin")
+
+	// --- 全局中间件 ---
+
 	// 中间件：强制内容类型为 HTML
 	//r.Use(middlewares.ForceHTML)
+
+	// 开始会话
+	r.Use(middlewares.StartSession)
 }
