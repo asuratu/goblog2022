@@ -17,7 +17,7 @@
       <change beforePath="$PROJECT_DIR$/pkg/view/view.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/view/view.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/create.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/create.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/articles/edit.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/edit.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/show.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.gohtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
     "code.cleanup.on.save": "true",
     "configurable.GoLibrariesConfigurable.is.expanded": "true",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/asura/Code/go/learnku/goblog2022/resources/views/layouts",
+    "last_opened_file_path": "/Users/asura/Code/go/learnku/goblog2022/routes",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "rearrange.code.on.save": "true",
@@ -69,11 +69,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/app/global" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Go 构建.go build goblog">

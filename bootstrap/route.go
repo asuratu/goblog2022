@@ -11,5 +11,6 @@ import (
 func InitRouter() {
 	router := mux.NewRouter()
 	routes.RegisterWebRoutes(router)
+	routes.RegisterUserRoutes(router)
 	global.Router = router
 }
