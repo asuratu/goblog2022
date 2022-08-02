@@ -8,8 +8,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/http/controllers/user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/user_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article/crud.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article/crud.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user/crud.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user/crud.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/route/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/route/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/types/converter.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/types/converter.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/view/view.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/view/view.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/articles/index.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/index.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/pages_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pages_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
@@ -143,7 +148,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/pkg/types/converter.go</url>
-          <line>14</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

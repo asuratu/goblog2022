@@ -2,6 +2,7 @@ package route
 
 import (
 	"goblog/app/global"
+	"goblog/pkg/config"
 	"goblog/pkg/logger"
 	"net/http"
 
@@ -10,14 +11,13 @@ import (
 
 // Name2URL 通过路由名称来获取 URL
 func Name2URL(routeName string, pairs ...string) string {
-	// Router 路由对象
 	url, err := global.Router.Get(routeName).URL(pairs...)
 	if err != nil {
 		logger.LogError(err)
 		return ""
 	}
 
-	return url.String()
+	return config.GetString("app.url") + url.String()
 }
 
 // GetRouteVariable 获取 URI 路由参数
