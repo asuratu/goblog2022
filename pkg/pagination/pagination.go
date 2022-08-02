@@ -183,7 +183,7 @@ func (p Pagination) HasNext() bool {
 	return page < totalPage
 }
 
-// PrevPage 前一页码，0 意味着这就是第一页
+// PrevPage 前一个页码，0 意味着这就是第一页
 func (p Pagination) PrevPage() int {
 	hasPrev := p.HasPrev()
 
