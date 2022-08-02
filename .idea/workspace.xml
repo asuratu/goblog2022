@@ -7,6 +7,7 @@
     <list default="true" id="5259da5c-b967-49b0-8cce-a8f0bda42792" name="变更" comment="变更">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/http/controllers/categories_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/categories_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/requests/article_form.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/requests/article_form.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/requests/requests.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/requests/requests.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootstrap/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/db.go" afterDir="false" />
