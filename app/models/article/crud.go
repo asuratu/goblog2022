@@ -13,7 +13,6 @@ func Get(idStr string) (Article, error) {
 	if err := model.DB.Preload("User").First(&article, id).Error; err != nil {
 		return article, err
 	}
-
 	return article, nil
 }
 

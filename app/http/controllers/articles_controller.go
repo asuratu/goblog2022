@@ -27,8 +27,6 @@ func (*ArticlesController) Edit(w http.ResponseWriter, r *http.Request) {
 	// 2. 读取对应的文章数据
 	_article, err := articleModel.Get(id)
 
-	fmt.Println(_article)
-
 	// 3. 如果出现错误
 	if err != nil {
 		if err == gorm.ErrRecordNotFound {
@@ -241,7 +239,6 @@ func (*ArticlesController) Show(w http.ResponseWriter, r *http.Request) {
 
 	// 3. 如果出现错误
 	if err != nil {
-		fmt.Println(err)
 		if err == gorm.ErrRecordNotFound {
 			// 3.1 数据未找到
 			w.WriteHeader(http.StatusNotFound)

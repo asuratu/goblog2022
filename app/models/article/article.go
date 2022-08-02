@@ -1,11 +1,9 @@
 package article
 
 import (
-	"goblog/app/global"
 	"goblog/app/models"
 	"goblog/app/models/user"
-	"goblog/pkg/logger"
-	"strconv"
+	"goblog/pkg/route"
 )
 
 // Article 文章模型
@@ -20,16 +18,11 @@ type Article struct {
 }
 
 // Link 方法用来生成文章链接
-func (a *Article) Link() string {
-	showURL, err := global.Router.Get("articles.show").URL("id", strconv.FormatInt(int64(a.ID), 10))
-	if err != nil {
-		logger.LogError(err)
-		return ""
-	}
-	return showURL.String()
+func (article Article) Link() string {
+	return route.Name2URL("articles.show", "id", article.GetStringID())
 }
 
 // CreatedAtDate 创建日期
-func (a *Article) CreatedAtDate() string {
-	return a.CreatedAt.Format("2006-01-02")
+func (article Article) CreatedAtDate() string {
+	return article.CreatedAt.Format("2006-01-02")
 }
