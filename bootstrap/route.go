@@ -7,8 +7,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
-// InitRouter 路由初始化
-func InitRouter() {
+// SetupRoute 路由初始化
+func SetupRoute() {
 	router := mux.NewRouter()
 	routes.RegisterWebRoutes(router)
 	routes.RegisterUserRoutes(router)
