@@ -10,6 +10,8 @@
       <change beforePath="$PROJECT_DIR$/app/models/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/view/view.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/view/view.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.gohtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
