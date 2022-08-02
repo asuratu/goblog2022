@@ -21,6 +21,11 @@ func RegisterUserRoutes(r *mux.Router) {
 	// 用户登出
 	r.HandleFunc("/auth/logout", middlewares.Auth(auc.Logout)).Methods("POST").Name("auth.logout")
 
+	// 用户相关
+	uc := new(controllers.UserController)
+	// 用户的文章列表
+	r.HandleFunc("/users/{id:[0-9]+}", uc.Show).Methods("GET").Name("users.show")
+
 	// --- 全局中间件 ---
 
 	// 中间件：强制内容类型为 HTML

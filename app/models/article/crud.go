@@ -10,7 +10,7 @@ import (
 func Get(idStr string) (Article, error) {
 	var article Article
 	id := types.StringToUint64(idStr)
-	if err := model.DB.Debug().Preload("User").First(&article, id).Error; err != nil {
+	if err := model.DB.Preload("User").First(&article, id).Error; err != nil {
 		return article, err
 	}
 
@@ -20,7 +20,17 @@ func Get(idStr string) (Article, error) {
 // GetAll 获取全部文章
 func GetAll() ([]Article, error) {
 	var articles []Article
-	if err := model.DB.Debug().Preload("User").Find(&articles).Error; err != nil {
+	if err := model.DB.Preload("User").Find(&articles).Error; err != nil {
+		return articles, err
+	}
+	return articles, nil
+}
+
+// GetByUserID 获取用户的文章
+func GetByUserID(uid string) ([]Article, error) {
+	var articles []Article
+	// 获取用户的文章
+	if err := model.DB.Preload("User").Where("user_id = ?", uid).Find(&articles).Error; err != nil {
 		return articles, err
 	}
 	return articles, nil
