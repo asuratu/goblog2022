@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5259da5c-b967-49b0-8cce-a8f0bda42792" name="变更" comment="变更">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/articles_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/http/controllers/auth_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/http/controllers/auth_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/article/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/view/view.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/view/view.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/_form_field.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/_form_field.gohtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.gohtml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.gohtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/session/session.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/session/session.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +56,7 @@
     "code.cleanup.on.save": "true",
     "configurable.GoLibrariesConfigurable.is.expanded": "true",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/asura/Code/go/learnku/goblog2022/routes",
+    "last_opened_file_path": "/Users/asura/Code/go/learnku/goblog2022",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "rearrange.code.on.save": "true",
@@ -68,22 +65,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$/app/global" />
     </key>
   </component>
   <component name="RunManager" selected="Go 测试.goblog/tests 中的 TestAllPages">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="goblog2022" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build goblog" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="goblog2022" />
       <working_directory value="$PROJECT_DIR$" />
@@ -91,15 +80,6 @@
       <package value="goblog" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="goblog2022" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <configuration name="goblog/tests 中的 TestAllPages" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">

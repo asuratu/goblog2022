@@ -4,9 +4,15 @@ import (
 	"goblog/app/global"
 	"goblog/app/http/middlewares"
 	"goblog/bootstrap"
+	"goblog/config"
 	"goblog/pkg/logger"
 	"net/http"
 )
+
+func init() {
+	// 初始化配置信息
+	config.Initialize()
+}
 
 func main() {
 	bootstrap.SetupDB()
